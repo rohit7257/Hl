@@ -2833,7 +2833,7 @@ function render(){
     let uniqueId = typeStr.toLowerCase();
 
     const singleHTML = `
-      <div class="kpi-grid" style="grid-template-columns:repeat(7, 1fr);">
+      <div class="kpi-grid">
         <div class="kpi-card" onclick="applyCardFilter('TOTAL_TL', this, '${typeStr}')"><div class="kpi-header"><div class="kpi-icon blue"><i class="fa-solid fa-dolly"></i></div><div class="kpi-label">TOTAL PICKABLE</div></div><div class="kpi-body"><div class="kpi-val" id="totalLoad">${format(totalPickable)}</div><div class="kpi-trend up"><i class="fa-solid fa-list-check"></i> <span id="totalLoadsBadge">${totalLoadsCount} Loads</span></div></div><div class="kpi-sub">Total TL Records</div></div>
         <div class="kpi-card" onclick="applyCardFilter('STARTED_COMPLETED', this, '${typeStr}')"><div class="kpi-header"><div class="kpi-icon green"><i class="fa-solid fa-box-open"></i></div><div class="kpi-label">PICKED QTY</div></div><div class="kpi-body"><div class="kpi-val" id="pickedQty">${format(totalPicked)}</div><div class="kpi-trend up"><i class="fa-solid fa-play"></i> Started/Done</div></div><div class="kpi-sub">Started + Completed</div></div>
         <div class="kpi-card" onclick="applyCardFilter('ASSIGNED_CREATED', this, '${typeStr}')"><div class="kpi-header"><div class="kpi-icon orange"><i class="fa-solid fa-hourglass-half"></i></div><div class="kpi-label">PENDING QTY</div></div><div class="kpi-body"><div class="kpi-val" id="pendingQty">${format(totalPending)}</div><div class="kpi-trend down"><i class="fa-solid fa-clock"></i> In Queue</div></div><div class="kpi-sub">Assigned + Created</div></div>
